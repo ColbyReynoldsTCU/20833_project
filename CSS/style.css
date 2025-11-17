@@ -2,8 +2,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-color: #0d1b2a; /* deep navy blue */
-  color: #f1faee; /* off-white text */
+  background-color: #0d1b2a; /* Found superman navy */
+  color: #f1faee; /* Found off-white color*/
 }
 
 /* Header */
@@ -47,7 +47,7 @@ main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #1d3557; /* deep blue container */
+  background-color: #1d3557; /* container for the main block of website*/
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
