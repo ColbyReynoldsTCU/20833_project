@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Man of Steel Analysis</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    /* Inline CSS for image sizing */
+    .chart-image {
+      width: 80%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Man of Steel Reviews Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="superman_returns.html">Superman Returns (2006)</a></li>
+        <li><a href="man_of_steel.html">Man of Steel (2013)</a></li>
+        <li><a href="#">Superman (1978)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="overview">
+      <h2>Analysis Overview</h2>
+      <p>
+        At first, I thought most viewers would just enjoy Man of Steel. The TextBlob sentiment showed most reviews were neutral or slightly positive, but VADER revealed sharper spikes in both positive and negative reactions. The largest spike at 0.00 shows many neutral reviews, while the big spike at 1.00 shows enthusiastic fans. Negative reactions were smaller but intense, revealing that the movie divides audiences. 
+      </p>
+    </section>
+
+    <section class="sentiment-analysis">
+      <h2>Sentiment Analysis</h2>
+      <p>
+        VADER gave a better sense of how emotionally charged the reviews were. Fans who loved the movie expressed very high positive sentiment while critics used strong negative language. This shows that audiences care about tone, character interpretation, and expectations of Superman.
+      </p>
+      <!-- Insert VADER sentiment histogram chart here -->
+      <img src="images/man_of_steel_vader.png" alt="VADER Sentiment Distribution" class="chart-image">
+
+      <p>
+        TextBlob showed mostly neutral reviews with a small peak at slight positivity. This triangle-like pattern reflects that most commentary was descriptive rather than strongly emotional.
+      </p>
+      <!-- Insert TextBlob sentiment histogram chart here -->
+      <img src="images/man_of_steel_textblob.png" alt="TextBlob Sentiment Distribution" class="chart-image"> 
+    </section>
+
+    <section class="term-frequency">
+  <h2>Term Frequency</h2>
+  <p>
+    Looking at the most frequent words, the focus is on pacing, action, and Superman themes. Big words like “action,” “story,” and “superman” dominate, while smaller words like “feel,” “love,” and “Krypton” highlight emotional and worldbuilding aspects.
+  </p>
+  <!-- Insert top 20 word frequency bar chart here -->
+  <img src="images/man_of_steel_termfrequency.png" alt="Top 20 Words Frequency" style="width:20%; max-width:400px; display:block; margin:20px auto;">
+</section>
+
+    <section class="topic-modeling">
+      <h2>Topic Modeling</h2>
+      <p>
+        LDA topic modeling revealed three main clusters: action and general impressions, story and character development, and the Superman universe including core characters. This shows that audiences talk about both plot and character, separating ideas naturally through word patterns.
+      </p>
+      <!-- Insert LDA topic charts here -->
+      <img src="images/man_of_steel_lda.png" alt="LDA Topic Modeling" class="chart-image"> 
+    </section>
+
+    <section class="wordcloud">
+      <h2>Word Cloud</h2>
+      <p>
+        The word cloud confirms the focus on tone, action, pacing, and Superman’s character. Prominent names like Clark, Snyder, and Cavill show that audiences respond to both the story and the creators. Smaller words hint at emotional engagement and worldbuilding.
+      </p>
+      <!-- Insert word cloud image here -->
+      <img src="images/man_of_steel_wordcloud.png" alt="Man of Steel Word Cloud" class="chart-image"> 
+    </section>
+
+    <section class="conclusion">
+      <h2>Key Takeaways</h2>
+      <p>
+        My initial assumption that most people would just enjoy the movie was too simple. The data shows that reactions are polarized, with fans expressing enthusiasm and critics expressing strong dislike. Audiences respond to more than the plot — they care about how Superman is portrayed, his moral complexity, and the emotional weight of the story. Overall, Man of Steel sparks strong feelings in different ways, highlighting both spectacle and deeper meaning.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Superman Movie Reviews | Designed by Colby Reynolds, Stephen Adeoye, Merci Yohana</p>
+  </footer>
+</body>
+</html>
