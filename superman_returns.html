@@ -1,152 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Superman Returns — Film Analysis</title>
-    <link rel="stylesheet" href="CSS/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superman Returns (2006) Analysis</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    /* Inline CSS for image sizing */
+    .chart-image {
+      width: 80%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="site-logo">MovieStudies</a>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="superman_returns.html" aria-current="page">This Analysis</a></li>
-                    <li><a href="man_of_steel.html">Man of Steel(2013)</a></li>
-                    <li><a href="#">Superman</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <h1>Superman Returns (2006) Reviews Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="superman_returns.html">Superman Returns (2006)</a></li>
+        <li><a href="man_of_steel.html">Man of Steel (2013)</a></li>
+        <li><a href="#">Superman (1978)</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Hero / title area -->
-        <section class="hero container">
-            <div class="hero-media">
-                <!-- Replace with the movie poster file -->
-                <img class="movie-poster" src="images/superman-poster.jpg" alt="Superman Returns poster">
-            </div>
-            <div class="hero-content">
-                <h1>Superman Returns — Analysis</h1>
-                <p class="meta">
-                    Director: Bryan Singer | Year: 2006 | Runtime: 154 min
-                </p>
-                <p class="lead">
-                    Short teaser summary or thesis statement for the analysis. Replace this with a concise sentence explaining the focus of your essay.
-                </p>
-                <!-- basic callouts for rating, tags, etc. -->
-                <p class="tags">Tags: drama, superhero, cinematography, themes</p>
-            </div>
+  <main>
+    <section class="overview">
+      <h2>Analysis Overview</h2>
+      <p>
+        Going into the project, I expected reactions to <em>Superman Returns</em> to be mixed, especially
+        because the movie sits between the classic Christopher Reeve era and the darker tone of
+        <em>Man of Steel</em>. Instead, the data shows a surprisingly steady level of positivity.
+        VADER sentiment scores cluster heavily at the extreme positive end, while TextBlob shows a smooth
+        distribution centered just above neutral. Together, these models suggest that most viewers liked
+        the film and that strongly negative reactions are relatively rare compared to the enthusiasm from fans.
+      </p>
+    </section>
+
+    <section class="sentiment-analysis">
+      <h2>Sentiment Analysis</h2>
+      <p>
+        VADER captures emotional intensity in the language of the reviews. The large spike near a score of
+        +1.0 means many reviewers used strongly positive words to describe their experience, often praising
+        Brandon Routh’s performance, the film’s emotional tone, and its respectful connection to the earlier
+        Superman films. There are negative and mixed reactions, but they appear as small bars spread across
+        the left side of the chart, showing that intense criticism exists but doesn’t dominate the discourse.
+      </p>
+
+      <!-- VADER sentiment histogram -->
+      <img src="images/SupermanReturnsVadar.png"
+           alt="VADER Sentiment Distribution for Superman Returns Reviews"
+           class="chart-image">
+
+      <p>
+        TextBlob, which measures overall polarity, produces a gentler curve: most reviews fall between slightly
+        negative and moderately positive, with the center of the distribution resting just above zero.
+        This indicates that a large portion of comments are descriptive or mildly favorable rather than
+        emotionally extreme. Compared with VADER, TextBlob suggests that while the language of some fans is
+        intensely enthusiastic, the broader audience tone is steadily positive but not hyperbolic.
+        The contrast between the two tools highlights how viewers balance nostalgia, expectations, and criticism
+        in their responses to the film.
+      </p>
+
+      <!-- TextBlob sentiment histogram -->
+      <img src="images/SupermanReturnsPolarity.png"
+           alt="TextBlob Sentiment Distribution for Superman Returns Reviews"
+           class="chart-image">
+    </section>
+
+    <section class="term-frequency">
+      <h2>Term Frequency</h2>
+      <p>
+        The most frequent words focus on the core elements of the movie: “superman,” “movie,” and “film”
+        dominate, showing that many reviews talk about the film as a whole experience. Names like “lois,”
+        “lex,” “luthor,” “brandon,” “routh,” “singer,” and “spacey” reveal how much attention viewers give to
+        the cast and director. Positive adjectives such as “good,” “great,” and “original,” along with terms
+        like “character,” “story,” “action,” and “effects,” suggest that audiences are paying close attention
+        both to performances and to how the movie looks and feels on screen.
+      </p>
+
+      <!-- Top word frequency chart -->
+      <img src="images/SupermanReturnsWordFreq.png"
+           alt="Top Words Frequency for Superman Returns"
+           style="width:30%; max-width:400px; display:block; margin:20px auto;">
+    </section>
+
+    <section class="topic-modeling">
+      <h2>Topic Modeling</h2>
+      <p>
+        LDA topic modeling separates the reviews into three main clusters. One topic centers on Superman,
+        Lois, Lex, Luthor, and the wider “world” of the film, capturing discussion about relationships,
+        villains, and how the story fits into the larger Superman mythology. A second topic groups words like
+        “movie,” “film,” “good,” “great,” “like,” and “Routh,” which reflects general impressions of quality
+        and the reception of Brandon Routh as the new Superman. The third topic brings together “story,”
+        “world,” “Clark,” “Lois,” and “time,” suggesting that viewers are also thinking about narrative
+        structure, pacing, and how the film interacts with the legacy of earlier Superman stories.
+      </p>
+
+      <!-- LDA topic charts -->
+      <img src="images/SupermanReturnsTopic1.png"
+           alt="LDA Topic Modeling for Superman Returns"
+           class="chart-image">
+           <img src="images/SupermanReturnsTopWord2.png"
+           alt="LDA Topic Modeling for Superman Returns"
+           class="chart-image">   
+           <img src="images/SupermanReturnsTopWord3.png"
+           alt="LDA Topic Modeling for Superman Returns"
+           class="chart-image">   
         </section>
 
-        <!-- Main article layout: content + aside -->
-        <section class="container content-grid">
-            <article class="main-article">
-                <!-- Synopsis -->
-                <section class="section" id="synopsis">
-                    <h2>Synopsis</h2>
-                    <p>
-                        <!-- Insert synopsis text here -->
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this paragraph with the film's synopsis.
-                    </p>
-                </section>
+    <section class="wordcloud">
+      <h2>Word Cloud</h2>
+      <p>
+        The word cloud emphasizes how central Superman himself is to audience reactions: “superman,” “movie,”
+        “film,” and “character” appear in large text, surrounded by positive terms like “good,” “great,” and
+        “well.” Names such as “Lois Lane,” “Brandon Routh,” “Kevin Spacey,” “Bryan Singer,” and “Christopher
+        Reeve” highlight how viewers constantly compare this film to earlier versions and to the actors who
+        defined the roles. Smaller phrases about story, time, action, and emotional moments show that fans are
+        not just reacting to nostalgia; they are also evaluating how successfully <em>Superman Returns</em>
+        updates the character for a new era.
+      </p>
 
-                <!-- Visuals -->
-                <section class="section" id="visuals">
-                    <h2>Key Scenes & Visual Analysis</h2>
-                    <div class="gallery">
-                        <figure class="figure">
-                            <img src="images/scene-1.jpg" alt="Scene 1 description">
-                            <figcaption>Figure 1 — Brief caption describing shot composition.</figcaption>
-                        </figure>
+      <!-- Word cloud image -->
+      <img src="images/SupermanReturnsWordCloud.png"
+           alt="Superman Returns Word Cloud"
+           class="chart-image">
+    </section>
 
-                        <figure class="figure">
-                            <img src="images/scene-2.jpg" alt="Scene 2 description">
-                            <figcaption>Figure 2 — Lighting and color notes.</figcaption>
-                        </figure>
-                    </div>
+    <section class="conclusion">
+      <h2>Key Takeaways</h2>
+      <p>
+        Overall, the analysis reveals that <em>Superman Returns</em> is received more warmly and consistently
+        than I initially expected. VADER shows a strong cluster of highly positive reviews, while TextBlob
+        indicates a broad base of mildly to moderately positive commentary. Viewers are especially invested in
+        the performances, the emotional tone, and how the film honors the legacy of earlier Superman stories.
+        Criticism exists—especially around pacing and comparisons to other superhero films—but it does not
+        dominate the conversation.
+      </p>
 
-                    <p>
-                        Commentary on camera work, color, and mise-en-scène. Add more paragraphs or subheadings as needed.
-                    </p>
-                </section>
+      <h3>What This Reveals</h3>
+      <p>
+        The reviews suggest that audiences see <em>Superman Returns</em> as a respectful, nostalgic continuation
+        of the classic Superman mythos rather than a radical reinvention. Many viewers appreciate its emotional
+        approach, its focus on character and relationships, and its attempts to bridge the gap between older
+        portrayals and modern superhero expectations. Compared with the more divisive reaction to
+        <em>Man of Steel</em>, this film appears to function as a kind of sentimental anchor: a movie that may
+        not excite everyone in the same way, but quietly earns a lot of goodwill from fans who value heart,
+        homage, and continuity.
+      </p>
+    </section>
 
-                <!-- Themes and motifs -->
-                <section class="section" id="themes">
-                    <h2>Themes & Motifs</h2>
-                    <ul>
-                        <li><strong>Heroism:</strong> Notes on moral choices and characterization.</li>
-                        <li><strong>Identity:</strong> Role of secret identities and public personas.</li>
-                        <li><strong>Nostalgia:</strong> Use of callbacks and intertextuality.</li>
-                    </ul>
-                    <p>
-                        Expand each bullet into paragraphs that analyze examples from the film.
-                    </p>
-                </section>
+    <section class="data-files">
+      <h2>Data and Analysis Files</h2>
+      <p>You can explore the full analysis and dataset below:</p>
+      <ul>
+        <li><a href="files/SupermanReturns.csv" target="_blank">CSV File: Superman Returns Reviews</a></li>
+        <li><a href="files/Superman_Returns_Analysis.ipynb" target="_blank">Colab Notebook: Superman Returns Analysis</a></li>
+      </ul>
+      <p>
+        Click the links to open or download the files. You can run the notebook in Google Colab to reproduce
+        the charts and analysis.
+      </p>
+    </section>
+  </main>
 
-                <!-- Technical analysis -->
-                <section class="section" id="tech">
-                    <h2>Technical Analysis</h2>
-                    <p>
-                        Camera, editing, sound design, visual effects. Include timestamps, scene references, and screenshots if available.
-                    </p>
-                    <pre class="code-sample" aria-hidden="true">
-/* Example placeholder for shot list or time-coded notes */
-00:00:30 — Opening aerial shot: long take, score entry
-00:15:42 — Close-up on actor: reaction shot, dolly in
-                    </pre>
-                </section>
-
-                <!-- Conclusion -->
-                <section class="section" id="conclusion">
-                    <h2>Conclusion</h2>
-                    <p>
-                        Summarize your findings and final thoughts. Suggest further research or questions for discussion.
-                    </p>
-                </section>
-            </article>
-
-            <aside class="sidebar">
-                <div class="card">
-                    <h3>Quick Facts</h3>
-                    <dl>
-                        <dt>Director</dt><dd>Bryan Singer</dd>
-                        <dt>Release</dt><dd>2006</dd>
-                        <dt>Genre</dt><dd>Superhero / Drama</dd>
-                    </dl>
-                </div>
-
-                <div class="card">
-                    <h3>Cast</h3>
-                    <ul>
-                        <li>Brandon Routh — Superman / Clark Kent</li>
-                        <li>Kate Bosworth — Lois Lane</li>
-                        <li>Kevin Spacey — Lex Luthor</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#" id="downloads">Download notes (PDF)</a></li>
-                        <li><a href="#" id="trailer">Watch trailer</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year">2025</span> MovieStudies — Film analysis template</p>
-        </div>
-    </footer>
-
-    <!-- Optional: small script to set year -->
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  <footer>
+    <p>&copy; 2025 Superman Movie Reviews | Designed by Colby Reynolds, Stephen Adeoye, Merci Yohana</p>
+  </footer>
 </body>
 </html>
