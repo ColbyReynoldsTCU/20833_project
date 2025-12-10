@@ -3,43 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Superman Movie Reviews</title>
+  <title>Superman Movie Reviews – Project Overview</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    /* Reuse chart image styling from other pages */
+    .chart-image {
+      width: 80%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .hero h1 {
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      background: #f0f0f0;
+    }
+
+    .movie-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .movie-card {
+      flex: 1 1 260px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      background: #fafafa;
+    }
+
+    .movie-card h3 {
+      margin-top: 0;
+    }
+
+    .movie-card a {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+
+    .section-title {
+      border-left: 4px solid #444;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .movie-links ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 10px;
+      }
+      .hero {
+        padding: 20px 10px 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Superman Movie Reviews</h1>
+    <h1>Superman Movie Reviews – Data & Humanities Project</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="superman_returns.html">Superman Returns (2006)</a></li>
-        <li><a href="man_of_steel.html">Man of Steel(2013)</a></li>
+        <li><a href="man_of_steel.html">Man of Steel (2013)</a></li>
         <li><a href="superman_2025.html">Superman (2025)</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO / INTRO -->
+  <section class="hero">
+    <h2>How Audiences React to Superman Across Three Generations</h2>
+    <p>
+      This project combines computational methods and humanities-based interpretation to analyze audience reviews
+      for <em>Superman Returns</em> (2006), <em>Man of Steel</em> (2013), and <em>Superman</em> (2025).
+      We use sentiment analysis, topic modeling, and word frequency tools to explore how reactions to Superman
+      have changed over time.
+    </p>
+   
+  </section>
+
   <main>
-    <section class="intro">
-      <h2>Welcome to the Ultimate Superman Review Hub</h2>
+    <!-- OVERVIEW -->
+    <section class="overview">
+      <h2 class="section-title">Overview</h2>
       <p>
-        This website is dedicated to exploring and reviewing three iconic Superman movies from the perspectives of fans and viewers. 
-        We’ll look at how each film captured the hero’s strength, values, and evolving role in modern culture — from Christopher Reeve’s 
-        classic performance to Henry Cavill’s powerful reimagining. 
+        Superman has been continuously reinvented on screen, and each version says something different about
+        what audiences expect from a hero. In this project, we analyze audience reviews for three major Superman
+        films: <em>Superman Returns</em> (2006), <em>Man of Steel</em> (2013), and <em>Superman</em> (2025).
+        Building on the technical and rhetorical skills we developed in HW4-1 and HW4-2, we moved from
+        analyzing a single dataset to comparing how reactions shift across different eras and creative
+        directions.
       </p>
       <p>
-        Each review considers audience reactions, visual style, and storytelling, highlighting how Superman continues to inspire generations.
+        For each film, we scraped audience reviews (from IMDb for 2006 and 2013, and Rotten Tomatoes for 2025),
+        cleaned the text, and ran sentiment analysis, term frequency analysis, topic modeling, and word cloud
+        visualizations. This main page explains our research question, methods, and overall findings, while the
+        individual movie pages dive into the detailed charts and interpretations for each film.
       </p>
     </section>
 
-    <section class="image-section">
-      <img src="images/dogpic.jpeg" alt="Dog dressed as Superman" class="hero-image">
-      <p class="caption">Even our furry friends can be heroes! 🦸‍♂️</p>
+    <!-- RESEARCH QUESTION -->
+    <section class="research-question">
+      <h2 class="section-title">Research Question</h2>
+      <p>
+        Our central question was:
+        <strong>How have audience reactions to Superman films changed over time, and what
+        themes and emotions dominate those responses?</strong>
+      </p>
+      <p>
+        At first, each of us planned to focus on just one movie and one dataset. However, as we looked at the
+        early results from our homework assignments, we realized that the more interesting story was
+        comparative. Superman is not just a single character; he is a cultural symbol that gets redesigned for
+        each new generation. That led us to expand the project from one film to three.
+      </p>
+      <p>
+        We hypothesized that <em>Superman Returns</em> (2006) would show more nostalgic and steady positivity;
+        that <em>Man of Steel</em> (2013) would produce highly polarized reactions; and that
+        <em>Superman</em> (2025) would divide viewers between excitement for James Gunn’s new direction and
+        skepticism about changing such an iconic character. This research question guided our tool choices and
+        how we interpreted the language patterns we found.
+      </p>
+    </section>
+
+    <!-- METHODS -->
+    <section class="methods">
+      <h2 class="section-title">Methods</h2>
+      <p>
+        Our methods combined data collection, text cleaning, and several layers of computational analysis.
+        First, we scraped audience reviews for each film: IMDb reviews for <em>Superman Returns</em> and
+        <em>Man of Steel</em>, and the 200 most recent audience reviews from Rotten Tomatoes for
+        <em>Superman</em> (2025). These platforms provide large, user-generated texts that reflect everyday
+        audience reactions rather than professional critic reviews.
+      </p>
+      <p>
+        After collecting the data, we cleaned the text by lowercasing, removing punctuation, and filtering out
+        English stopwords. This produced a simplified version of each review that was easier for our models to
+        process, while still preserving key words like character names, emotional descriptors, and film-related
+        terms. We then applied two different sentiment tools: VADER, which is sensitive to emotional intensity
+        and slang, and TextBlob, which gives a smoother polarity score. Using both allowed us to compare
+        “emotional spikes” with more general tonal trends.
+      </p>
+      <p>
+        To explore what audiences actually talk about, we used term frequency analysis to identify the most
+        common words for each film. We then used Latent Dirichlet Allocation (LDA) topic modeling to group
+        related words into themes, such as action, character development, nostalgia, or the wider DC universe.
+        Finally, we generated word clouds to visualize which names, adjectives, and concepts appear most
+        prominently in the reviews.
+      </p>
+      <p>
+        These methods have limitations. Online reviews are self-selected and over-represent people who feel
+        strongly enough to post. Sentiment tools sometimes misread sarcasm or mixed feelings, and topic
+        modeling can group words in ways that require careful interpretation. However, by combining multiple
+        methods and cross-checking our computational outputs with close reading of sample reviews, we built a
+        richer and more reliable picture of audience reception across the three films.
+      </p>
+    </section>
+
+    <!-- FINDINGS -->
+    <section class="findings">
+      <h2 class="section-title">Findings</h2>
+      <p>
+        Across the three films, our analysis confirmed that audience reactions to Superman are not static—they
+        change with tone, direction, and cultural context. <em>Superman Returns</em> (2006) showed a strong,
+        consistent lean toward positive sentiment. VADER revealed a large spike near +1.0, and common words
+        focused on “superman,” “movie,” “Lois,” “Lex,” and “character,” suggesting that many viewers appreciated
+        its nostalgic and emotional approach.
+      </p>
+      <p>
+        <em>Man of Steel</em> (2013), by contrast, displayed more polarization. VADER showed strong spikes on
+        both the positive and negative sides, while TextBlob indicated a mix of neutral and slightly positive
+        reviews. Frequent terms like “action,” “story,” “Superman,” “Krypton,” and “feel” suggest that viewers
+        were deeply engaged with the film’s darker tone, intense action, and moral complexity—sometimes in
+        admiration, and sometimes in frustration.
+      </p>
+      <p>
+        For <em>Superman</em> (2025), early Rotten Tomatoes reviews leaned positive overall, with VADER
+        capturing enthusiastic language about the “movie,” “story,” “character,” and James Gunn’s direction.
+        TextBlob showed that many reviews were slightly positive or neutral, indicating that while a core group
+        of fans responded very strongly, another group offered more measured praise or mild criticism. These
+        patterns largely matched our hypotheses, but also revealed more steady positivity for 2006 and 2025
+        than we initially expected.
+      </p>
+    </section>
+
+    <!-- INTEGRATION & REFLECTION -->
+    <section class="integration-reflection">
+      <h2 class="section-title">Integration &amp; Reflection</h2>
+      <p>
+        This project required us to integrate humanities-style interpretation with computational tools. Close
+        reading alone can show how one or two reviews talk about Superman, but it struggles to reveal patterns
+        across thousands of comments. By using sentiment analysis, topic modeling, and word frequencies, we
+        were able to see large-scale trends in how audiences describe tone, character, and story across
+        different Superman eras.
+      </p>
+      <p>
+        At the same time, the computational outputs only became meaningful when we interpreted them using
+        humanities perspectives. A spike in positive sentiment matters less by itself than when we connect it
+        to questions like: What kind of Superman do people want? Why do some viewers react strongly against
+        darker portrayals? How does nostalgia influence reception of newer films? In this sense, computation
+        did not replace close reading; it extended it. It allowed us to zoom out, see the bigger picture of
+        audience reaction, and then zoom back in to understand what those reactions say about how Superman
+        functions as a cultural symbol today.
+      </p>
+    </section>
+
+    <!-- LINKS TO INDIVIDUAL PAGES -->
+    <section class="movie-links">
+      <h2 class="section-title">Explore Individual Movie Analyses</h2>
+      <p>Click below to see the detailed analysis pages for each film:</p>
+      <ul>
+        <li><a href="superman_returns.html">Superman Returns (2006)</a></li>
+        <li><a href="man_of_steel.html">Man of Steel (2013)</a></li>
+        <li><a href="superman_2025.html">Superman (2025)</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Superman Movie Reviews | Designed by Colby Reynolds</p>
+    <p>&copy; 2025 Superman Movie Reviews | Designed by Colby Reynolds, Stephen Adeoye, Merci Yohana</p>
   </footer>
 </body>
 </html>
