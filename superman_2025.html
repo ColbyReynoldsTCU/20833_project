@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Man of Steel Analysis</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    /* Inline CSS for image sizing */
+    .chart-image {
+      width: 80%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Superman (2025) Reviews Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="superman_returns.html">Superman Returns (2006)</a></li>
+        <li><a href="man_of_steel.html">Man of Steel (2013)</a></li>
+        <li><a href="superman_2025.html">Superman (2025)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   <section class="overview">
+  <h2>Analysis Overview</h2>
+  <p>
+    I heard a lot about the new 2025 Superman movie. Some people thought it was a return to what the "real" superman should emobdy, others believed it was overhyped and failed to live up to expectations. 
+    Going into this analysis, I fully expected a good mix of reviews, both positive and negative. I knew that James Gunn's direction would bring a fresh take, but I was curious how audiences would react to this new portrayal of such an iconic character; if they would embrace the changes or prefer traditional interpretations.
+
+    I scrapped rotten tomatoes for the 2025 Superman movie, gleaning the 200 most recent reviews off of the site as I believed it would have a comprehensive representation of audience sentiment.
+    Surprisingly, VADER showed a more positive leaning overall, with a significant spike in positive reviews. TextBlob, on the other hand, revealed a more balanced distribution, indicating that while many viewers enjoyed the film, there was also a substantial portion of neutral and slightly negative feedback. This contrast suggests that while the movie resonated well with a large segment of the audience, it also sparked diverse opinions regarding its execution and faithfulness to the Superman legacy.
+
+  </p>
+</section>
+
+<section class="sentiment-analysis">
+  <h2>Sentiment Analysis</h2>
+  <p>
+    Like I mentioned earlier, VADER captured emotional intensity in the language of the reviews. The large spike near a score of +1.0 means that many audience members used more positive vocabulary in their review of the film. 
+    This suggests that those who enjoyed the movie did so enthusiastically, often praising the fresh direction, character development, and visual effects.WHile there were negative and mixed reactions, they appeared smaller and more spread across the left side of the chart.
+    This showcases how there were indeed some negative and neutral reviews but reveals that they were less dominant in the overall discourse.
+  </p>
+  <!-- Insert VADER sentiment histogram chart here -->
+  <img src="images/superman_vader.png" alt="VADER Sentiment Distribution" class="chart-image">
+
+  <p>
+    TextBlob, which measures overall polarity, produces a gentler curve: most reviews fall between slightly positive and neutral. The distribution of the chart suggests that a good portion of commentary was descriptive and/or observational.
+    Comparing TextBlob and VADER highlights allows one to witness the different aspects of audience response: TextBlob shows general tone, while VADER captures more emotional sentiments.
+  </p>
+  <!-- Insert TextBlob sentiment histogram chart here -->
+  <img src="images/superman_textblob.png" alt="TextBlob Sentiment Distribution" class="chart-image"> 
+</section>
+
+<section class="term-frequency">
+  <h2>Term Frequency</h2>
+  <p>
+    The most frequent words reveal what audiences focused on: story, action, and Superman himself. Words like “superman,” “movie,”, "like", and "good" dominate. 
+    Smaller but significant words like “character,” "film",” and "gunn" show that people care about the creative team and storytelling.
+    This term frequency analysis indicates that viewers are noticing the characters and the action but are also taking note of this new era of dc movies under James Gunn.
+  </p>
+  <!-- Insert top 20 word frequency bar chart here -->
+  <img src="images/superman_frequent_words.png" alt="Top 20 Words Frequency" style="width:100%; max-width:800px; display:block; margin:20px auto;">
+</section>
+
+<section class="topic-modeling">
+  <h2>Topic Modeling</h2>
+  <p>
+    My LDA topic modeling revealed three main topics in the reviews:
+    <li>Topic 1 focuses on the movie's tone and overall impression, with words like "character" and "gunn"</li>
+    <li>Topic 2 centers around the plot and the character arcs, shown by words like "super" and "hero"</li>
+    <li>Topic 3 focuses on the DC universe and its aspects. Words like "like", "good" and "dc" showcase this.</li>
+  </p>
+  <!-- Insert LDA topic charts here -->
+  <img src="images/superman_topic_top_words.png" alt="LDA Topic Modeling" class="chart-image"> 
+</section>
+
+<section class="wordcloud">
+  <h2>Word Cloud</h2>
+  <p>
+    The word cloud visualization shows how the audience really focused on the character of Superman and the movie itself. Words like "superman", "movie", "like", and "good" stand out prominently, indicating that viewers were particularly engaged with the portrayal of the iconic hero and their overall enjoyment of the film.
+  </p>
+  <!-- Insert word cloud image here -->
+  <img src="images/superman_word_cloud.png" alt="Superman Word Cloud" class="chart-image"> 
+</section>
+<section class="conclusion">
+  <h2>Key Takeaways</h2>
+  <p>
+    Initially, I expected a mixed bag of reviews for the 2025 Superman movie, given that the beloved character was brought under a fresh direction with James Gunn.
+    Naturally I expected people to have a strong push back against the changes made to such an iconic character. 
+    However, the sentiment analysis revealed a more positive leaning sentiment overall, especially with VADER showing a significant spike in positive reviews.
+  </p>
+</section>
+<section class="data-files">
+  <h2>Data and Analysis Files</h2>
+  <p>My full analysis and data files are available below:</p>
+  <ul>
+    <li><a href="files/superman_rottentomatoes.csv" target="_blank">CSV File: Superman (2025) Reviews</a></li>
+    <li><a href="files/superman_2025_model.ipynb" target="_blank">Colab Notebook: Superman Topic Model & Analysis</a></li>
+  </ul>
+  <p>Click the links to open or download the files. You can run the notebook in Google Colab to reproduce the charts and analysis.</p>
+</section>
+ <main>
+
+  <footer>
+    <p>&copy; 2025 Superman Movie Reviews | Designed by Colby Reynolds, Stephen Adeoye, Merci Yohana</p>
+  </footer>
+</body>
+</html>
